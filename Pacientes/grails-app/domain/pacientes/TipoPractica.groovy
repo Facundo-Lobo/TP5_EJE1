@@ -3,10 +3,12 @@ package pacientes
 class TipoPractica {
 
 
-	//Practica: practica //uno a uno 
+	
 	int codigo
-	String nombre 
-
+	String nombre ; 
+	
+	//static belongsTo = [practica: Practica] //uno a uno 
+    
     static constraints = {
     	codigo (blank : false)
     	nombre (blank : false) 
