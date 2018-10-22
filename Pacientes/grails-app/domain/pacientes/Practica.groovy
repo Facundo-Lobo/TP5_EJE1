@@ -5,7 +5,7 @@ class Practica {
 
 	
 	
-	Date feachaPrescripcion
+	Date fechaPrescripcion
 	Date fechaRealizacion
 	String resultado
     
@@ -17,10 +17,10 @@ class Practica {
     static belongsTo = [consulta: Consulta , tipoPractica: TipoPractica , paciente: Paciente] // solo tiene 1 consulta
 
     static constraints = {
-    	feachaPrescripcion (blank : false  )
-    	fechaRealizacion (blank : false , validator: { val, obj, errors ->
-    if (obj.feachaPrescripcion > val) return ['fechaRealizIncorrecta']
-})
+    	fechaPrescripcion (blank: false, max: new Date())
+    	fechaRealizacion (blank: false , validator: { val, obj ->
+            if (obj.fechaPrescripcion > val) return ['fechaRealizacionIncorrecta']
+        })
     	resultado (maxSize :500)
     }
 }
