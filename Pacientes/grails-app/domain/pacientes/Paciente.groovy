@@ -15,7 +15,7 @@ static hasMany = [consultas: Consulta , practicas: Practica] // tiene 1 a mmucha
 
  //tiene 0 a mmuchas practicas
 
-static contraints = {
+static constraints = {
 	nroDocumento(unique: true)//default blank : false
 	apellido(maxSize: 100)
 	nombre(maxSize: 100)
