@@ -88,7 +88,11 @@ class ConsultaController {
     }
 //esta funcion recibe el id de la consulta "params" HASTA AQUI LLEGAMOS , AGREGAMOS UN "consultacotroller"
     def createPractica() {
-        respond consultaService.get(params.consultaId)
+        def vconsulta = consultaService.get(params.consultaId)
+
+       //respond new Practica(consulta: vconsulta) estas 2 lineas son equivalentes y 
+       //que el respond nos manda a una vista que tiene el mismo nombre del metodo
+       render(view:"createPractica",model:[practica: new Practica(consulta: vconsulta)])
        
     }
 

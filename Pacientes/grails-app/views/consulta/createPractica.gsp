@@ -25,9 +25,27 @@
                 </g:eachError>
             </ul>
             </g:hasErrors>
+
+
+            <f:display bean="practica.consulta" />
+
+
+
+
+
+
+            <br> fecha: ${practica.consulta.fecha}
+            <br> hora: ${practica.consulta.hora}
+            <br> motivo: ${practica.consulta.motivo}
+            <br> diagnostico: ${practica.consulta.diagnostico}
+            <br> tratamiento: ${practica.consulta.tratamiento}
+            <br> id: ${practica.consulta.id}
+
+
             <g:form resource="${this.practica}" method="POST">
                 <fieldset class="form">
-                    <f:all bean="practica"/>
+                    <f:all bean="practica" />
+                    
                 </fieldset>
                 <fieldset class="buttons">
                     <g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" />

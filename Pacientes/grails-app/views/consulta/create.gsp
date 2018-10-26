@@ -27,7 +27,7 @@
             </g:hasErrors>
             <g:form resource="${this.consulta}" method="POST">
                 <fieldset class="form">
-                    <f:all bean="consulta" except="practicas" />
+                    <f:all bean="consulta" except="practicas" /> <!-- esta parte desabilita la opcion de agregarle una practica en la creacion de consulta-->
 
 
                 </fieldset>
