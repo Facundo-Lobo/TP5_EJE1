@@ -2,20 +2,51 @@
 <html lang="en" class="no-js">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <!--Agregado-->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+  <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+<!--FIN Agregado-->
+
+
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <title>
         <g:layoutTitle default="Grails"/>
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <asset:link rel="icon" href="favicon.ico" type="image/x-ico" />
+    <asset:link rel="icon" href="Graphicloads-Polygon-Hospital.ico" type="image/x-ico" />
 
     <asset:stylesheet src="application.css"/>
 
     <g:layoutHead/>
+
+    <!--Agregado-->
+    <style>
+        a{
+          padding-left: 20px;
+        }
+
+        #logo{
+          padding-right: 20px;
+        }
+
+        li{
+            padding-right: 20px;
+        }
+
+
+
+    </style>
+    <!--FIN Agregado-->
+
+
+
 </head>
 <body>
 
-    <div class="navbar navbar-default navbar-static-top" role="navigation">
+    <!--<div class="navbar navbar-default navbar-static-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -34,11 +65,41 @@
                 </ul>
             </div>
         </div>
+    </div>-->
+
+    <!--Agregado-->
+    <div class="navbar navbar-default navbar-inverse " role="navigation" >
+        <div class="container">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="/#" style="padding-right:150px">
+                      <asset:image src="Graphicloads-Polygon-Hospital.ico" alt="Logo" id="Logo" title="Inicio"/>
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse " id="navbarCollapse">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item" ><button type="button" class="btn btn-inverse navbar-btn"><a href="http://localhost:8080/paciente/index">Paciente &nbsp&nbsp&nbsp</a></button></li>
+                <li class="nav-item"><button type="button" class="btn btn-inverse navbar-btn"><a href="http://localhost:8080/paciente/index"><a href="http://localhost:8080/consulta/index">Consulta &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a></button></li>
+                <li class="nav-item"><button type="button" class="btn btn-inverse navbar-btn"><a href="http://localhost:8080/practica/index">Práctica &nbsp&nbsp&nbsp</a></button></li>
+                <li class="nav-item"><button type="button" class="btn btn-inverse navbar-btn"><a href="http://localhost:8080/tipoPractica/index">Tipo Práctica &nbsp&nbsp&nbsp</a></button></li>
+              </ul>
+
+
+            </div>
+
+        </div>
     </div>
+    <!--FIN Agregado-->
+
+
+
+
+
+
 
     <g:layoutBody/>
 
-    <div class="footer" role="contentinfo">pacientes!</div>
+    <div class="footer" role="contentinfo">Sanatorio &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Dirección &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Teléfono &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Horarios de Atención &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 
     <div id="spinner" class="spinner" style="display:none;">
         <g:message code="spinner.alt" default="Loading&hellip;"/>

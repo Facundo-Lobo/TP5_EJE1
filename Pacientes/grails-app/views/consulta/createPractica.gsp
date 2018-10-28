@@ -34,12 +34,12 @@
 
 
 
-            <br> fecha: ${practica.consulta.fecha}
+            <!--<br> fecha: ${practica.consulta.fecha}
             <br> hora: ${practica.consulta.hora}
             <br> motivo: ${practica.consulta.motivo}
             <br> diagnostico: ${practica.consulta.diagnostico}
-            <br> tratamiento: ${practica.consulta.tratamiento}
-            <br> id: ${practica.consulta.id}
+            <br> tratamiento: ${practica.consulta.tratamiento}-->
+            <br> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp ID Práctica: ${practica.consulta.id} <br>
 
 
             <g:form resource="${this.practica}" method="POST">
