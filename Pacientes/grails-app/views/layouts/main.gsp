@@ -25,7 +25,12 @@
     <!--Agregado-->
     <style>
         a{
-          padding-left: 20px;
+            padding-left: 2px;
+            color: #000000;
+            text-decoration: none;
+        }
+        .navbar-default a{
+            color: black !important;
         }
 
         #logo{
@@ -36,7 +41,14 @@
             padding-right: 20px;
         }
 
+        .footer {
+            font-size: 15px;
+            font-weight: bold;
+        }
 
+        .navbar-nav{
+            list-style:none;
+        }
 
     </style>
     <!--FIN Agregado-->
@@ -68,7 +80,7 @@
     </div>-->
 
     <!--Agregado-->
-    <div class="navbar navbar-default navbar-inverse " role="navigation" >
+    <div class="navbar navbar-default navbar-inverse" role="navigation" >
         <div class="container">
             <div class="navbar-header">
               <a class="navbar-brand" href="/#" style="padding-right:150px">
@@ -78,10 +90,10 @@
 
             <div class="collapse navbar-collapse " id="navbarCollapse">
               <ul class="navbar-nav mr-auto">
-                <li class="nav-item" ><button type="button" class="btn btn-inverse navbar-btn"><a href="http://localhost:8080/paciente/index">Paciente &nbsp&nbsp&nbsp</a></button></li>
-                <li class="nav-item"><button type="button" class="btn btn-inverse navbar-btn"><a href="http://localhost:8080/paciente/index"><a href="http://localhost:8080/consulta/index">Consulta &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a></button></li>
-                <li class="nav-item"><button type="button" class="btn btn-inverse navbar-btn"><a href="http://localhost:8080/practica/index">Práctica &nbsp&nbsp&nbsp</a></button></li>
-                <li class="nav-item"><button type="button" class="btn btn-inverse navbar-btn"><a href="http://localhost:8080/tipoPractica/index">Tipo Práctica &nbsp&nbsp&nbsp</a></button></li>
+                <li class="nav-item" ><button type="button" class="btn btn-inverse navbar-btn"><a href="http://localhost:8080/paciente/index">Paciente </a></button></li>
+                <li class="nav-item"><button type="button" class="btn btn-inverse navbar-btn"><a href="http://localhost:8080/paciente/index"><a href="http://localhost:8080/consulta/index">Consulta </a></button></li>
+                <li class="nav-item"><button type="button" class="btn btn-inverse navbar-btn"><a href="http://localhost:8080/practica/index">Práctica </a></button></li>
+                <li class="nav-item"><button type="button" class="btn btn-inverse navbar-btn"><a href="http://localhost:8080/tipoPractica/index">Tipo Práctica </a></button></li>
               </ul>
 
 

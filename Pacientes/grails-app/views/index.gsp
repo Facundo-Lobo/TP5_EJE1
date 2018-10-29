@@ -42,30 +42,56 @@
             </ul>
         </li>
     </content>
+    
+    <!--  Agregado  -->
+    <style>
+        .grails-logo-container{
+            height: 330px;
+        }
+        .navbar-default a{
+            color: black !important;
+        }
+        #content .colset-2-its > p {
+            text-align: left;
+        }
+        #content .colset-2-its > h1 {
+            margin-top: 0px;
+            font-weight: bold;
+        }
+        a {
+            padding-left: 2px;
+            color: #000000;
+            text-decoration: none;
+        }
+        .controller{
+            margin: 10px
+        }
+        
+    </style>
+    <!--  FIN Agregado  -->
+
 
     <div class="svg" role="presentation">
         <div class="grails-logo-container">
-            <asset:image src="grails-cupsonly-logo-white.svg" class="grails-logo"/>
+            <asset:image src="FondoPrincipal2.jpg" class="grails-logo"/>
         </div>
     </div>
 
     <div id="content" role="main">
         <section class="row colset-2-its">
-            <h1>Welcome to Grails</h1>
+            <h1>Sanatorio</h1>
 
             <p>
-                Congratulations, you have successfully started your first Grails application! At the moment
-                this is the default page, feel free to modify it to either redirect to a controller or display
-                whatever content you may choose. Below is a list of controllers that are currently deployed in
-                this application, click on each to execute its default action:
+                Un sanatorio es un centro de salud que, de acuerdo al país, puede especializarse en diferentes cuestiones. Se trata de un lugar donde los pacientes que sufren diversos trastornos y enfermedades son atendidos y pueden someterse a distintos tratamientos.
+                El objetivo de un sanatorio, por lo tanto, es asistir a las personas convalecientes o enfermas para lograr su curación.
             </p>
 
             <div id="controllers" role="navigation">
-                <h2>Available Controllers:</h2>
+                <h2>Controladores:</h2>
                 <ul>
                     <g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
                         <li class="controller">
-                            <g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link>
+                            <button type="button"><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></button>
                         </li>
                     </g:each>
                 </ul>
