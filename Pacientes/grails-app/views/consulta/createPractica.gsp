@@ -13,6 +13,16 @@
                 <li><g:link class="list" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
             </ul>
         </div>
+
+        <div class="container-fluid">
+          <br> <h4>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp CONSULTA:</h4>
+          <br> <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Fecha: ${practica.consulta.fecha}</p>
+          <br> <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Hora: ${practica.consulta.hora}</p>
+          <br> <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Motivo: ${practica.consulta.motivo}</p>
+          <br> <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Diagnostico: ${practica.consulta.diagnostico}</p>
+          <br> <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Tratamiento: ${practica.consulta.tratamiento}</p>
+        </div>
+
         <div id="create-practica" class="content scaffold-create" role="main">
             <h1><g:message code="default.create.label" args="[entityName]" /></h1>
             <g:if test="${flash.message}">
@@ -30,22 +40,10 @@
             <f:display bean="practica.consulta" />
 
 
-
-
-
-
-            <!--<br> fecha: ${practica.consulta.fecha}
-            <br> hora: ${practica.consulta.hora}
-            <br> motivo: ${practica.consulta.motivo}
-            <br> diagnostico: ${practica.consulta.diagnostico}
-            <br> tratamiento: ${practica.consulta.tratamiento}-->
-            <br> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp ID Práctica: ${practica.consulta.id} <br>
-
-
             <g:form resource="${this.practica}" method="POST">
                 <fieldset class="form">
                     <f:all bean="practica" />
-                    
+
                 </fieldset>
                 <fieldset class="buttons">
                     <g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" />

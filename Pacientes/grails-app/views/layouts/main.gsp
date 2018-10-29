@@ -19,6 +19,7 @@
     <asset:link rel="icon" href="Graphicloads-Polygon-Hospital.ico" type="image/x-ico" />
 
     <asset:stylesheet src="application.css"/>
+    <asset:stylesheet src="bootstrap.css"/>
 
     <g:layoutHead/>
 

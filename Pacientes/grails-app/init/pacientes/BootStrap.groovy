@@ -1,4 +1,4 @@
-//revisar bien si esta todo 
+//revisar bien si esta todo
 package pacientes
 
 import pacientes.Paciente
@@ -13,15 +13,15 @@ class BootStrap {
 //pacientes -------------------------------------------
 
 
-def paciente1=new Paciente(email:"facundo@hotmail.com", telefono:"3832-469022" , nombre:"facundo" , fechaNacimiento: Date.parse("yyyy-MM-dd" , "2015-10-20") , nro_documento: 55568553 , apellido: "miranda", sexo:"M") 
+def paciente1=new Paciente(email:"facundo@hotmail.com", telefono:"3832-469022" , nombre:"facundo" , fechaNacimiento: Date.parse("yyyy-MM-dd" , "2015-10-20") , nro_documento: 55568553 , apellido: "miranda", sexo:"M")
 
 if (!paciente1.save(flush:true)){
 	paciente1.errors.allErrors.each{
 		println it
 	}
 }
- // lo esta creando 
-def paciente2=new Paciente(email:"facundo@hotmail.com", telefono:"3832-469022" , nombre:"facundo2" , fechaNacimiento: Date.parse("yyyy-MM-dd" , "2015-10-20") , nro_documento: 55568553 , apellido: "miranda2", sexo:"M") 
+ // lo esta creando
+def paciente2=new Paciente(email:"facundo@hotmail.com", telefono:"3832-469022" , nombre:"facundo2" , fechaNacimiento: Date.parse("yyyy-MM-dd" , "2015-10-20") , nro_documento: 55568553 , apellido: "miranda2", sexo:"M")
 
 if (!paciente2.save(flush:true)){
 	paciente1.errors.allErrors.each{
@@ -36,14 +36,14 @@ println ("paciente2 nombre= "+paciente2.nombre);
 
 //consulta ---------------------------------------------
 
-def consulta1=new Consulta (fecha: Date.parse("yyyy-MM-dd" , "2019-10-23") , motivo:"n" , diagnostico:"n1" , tratamiento:"n" , paciente:paciente1 )
+def consulta1=new Consulta (fecha: Date.parse("yyyy-MM-dd" , "2019-11-23"), hora:"20:10" , motivo:"n" , diagnostico:"n1" , tratamiento:"n" , paciente:paciente1 )
 
 if (!consulta1.save(flush:true)){
 	consulta1.errors.allErrors.each{
 		println it
 	}
 }
-def consulta2=new Consulta (fecha: Date.parse("yyyy-MM-dd" , "2019-10-23")  , motivo:"n" , diagnostico:"n2" , tratamiento:"n" ,paciente:paciente1 )
+def consulta2=new Consulta (fecha: Date.parse("yyyy-MM-dd" , "2019-11-23"), hora:"21:24"  , motivo:"n" , diagnostico:"n2" , tratamiento:"n" ,paciente:paciente1 )
 
 if (!consulta2.save(flush:true)){
 	consulta2.errors.allErrors.each{
@@ -119,7 +119,7 @@ if (practica1.paciente == paciente1 && practica1.tipoPractica.codigo == 231265){
 */
 
     def destroy = {
- 
+
     }
 }
 }
