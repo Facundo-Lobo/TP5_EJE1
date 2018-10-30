@@ -36,14 +36,14 @@ println ("paciente2 nombre= "+paciente2.nombre);
 
 //consulta ---------------------------------------------
 
-def consulta1=new Consulta (fecha: Date.parse("yyyy-MM-dd" , "2019-11-23"), hora:"20:10" , motivo:"n" , diagnostico:"n1" , tratamiento:"n" , paciente:paciente1 )
+def consulta1=new Consulta (fecha: Date.parse("yyyy-MM-dd" , "2018-11-23"), hora:"20:10" , motivo:"n" , diagnostico:"n1" , tratamiento:"n" , paciente:paciente1 )
 
 if (!consulta1.save(flush:true)){
 	consulta1.errors.allErrors.each{
 		println it
 	}
 }
-def consulta2=new Consulta (fecha: Date.parse("yyyy-MM-dd" , "2019-11-23"), hora:"21:24"  , motivo:"n" , diagnostico:"n2" , tratamiento:"n" ,paciente:paciente1 )
+def consulta2=new Consulta (fecha: Date.parse("yyyy-MM-dd" , "2018-11-23"), hora:"21:24"  , motivo:"n" , diagnostico:"n2" , tratamiento:"n" ,paciente:paciente1 )
 
 if (!consulta2.save(flush:true)){
 	consulta2.errors.allErrors.each{
@@ -73,21 +73,21 @@ println ("tipoPractica1 nombre= "+tipoPractica1.nombre);
 println ("tipoPractica2 nombre= "+tipoPractica2.nombre);
 
 //practica ---------------------------------------------------
-def practica1=new Practica (feachaPrescripcion: Date.parse("yyyy-MM-dd" , "2018-15-10"),fechaRealizacion: Date.parse("yyyy-MM-dd" , "2018-15-11" ),resultado :"r1" ,tipoPractica:tipoPractica2 , consulta:consulta1 ,paciente:paciente1)
+def practica1=new Practica (fechaPrescripcion: Date.parse("yyyy-MM-dd" , "2018-12-12"),fechaRealizacion: Date.parse("yyyy-MM-dd" , "2018-12-14" ),resultado :"r1" ,tipoPractica:tipoPractica2 , consulta:consulta1 ,paciente:paciente1)
 
 if (!practica1.save(flush:true)){
 	practica1.errors.allErrors.each{
 		println it
 	}
 }
-def practica2=new Practica (feachaPrescripcion: Date.parse("yyyy-MM-dd" , "2018-12-11"),fechaRealizacion: Date.parse("yyyy-MM-dd" , "2018-12-09"),resultado :"r2" ,tipoPractica:tipoPractica2 , consulta:consulta1 ,paciente:paciente1 )
+def practica2=new Practica (fechaPrescripcion: Date.parse("yyyy-MM-dd" , "2018-12-11"),fechaRealizacion: Date.parse("yyyy-MM-dd" , "2018-12-15"),resultado :"r2" ,tipoPractica:tipoPractica2 , consulta:consulta1 ,paciente:paciente1 )
 
 if (!practica2.save(flush:true)){
 	practica2.errors.allErrors.each{
 		println it
 	}
 }
-def practica3=new Practica (feachaPrescripcion: Date.parse("yyyy-MM-dd" , "2018-15-11"),fechaRealizacion: Date.parse("yyyy-MM-dd" , "2018-15-11") ,resultado :"r3" ,tipoPractica:tipoPractica1, consulta:consulta1 ,paciente:paciente1)
+def practica3=new Practica (fechaPrescripcion: Date.parse("yyyy-MM-dd" , "2018-12-15"),fechaRealizacion: Date.parse("yyyy-MM-dd" , "2018-12-19") ,resultado :"r3" ,tipoPractica:tipoPractica1, consulta:consulta1 ,paciente:paciente1)
 
 if (!practica3.save(flush:true)){
 	practica3.errors.allErrors.each{
